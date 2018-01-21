@@ -1,0 +1,683 @@
+﻿
+@{
+    ViewBag.Title = "ContactUs_New";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link href="~/Content/CoSwapApp.css" rel="stylesheet" />
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/bootstrap.min.js"></script>
+<script src="~/scripts/modernizr-2.6.2.js"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<style>
+    .footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #474546;
+        color: white;
+    }
+
+    td.Hyper a:hover {
+        text-decoration: none;
+    }
+
+    .container {
+        max-width: 2000px;
+        padding: 0;
+    }
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        color: #696969;
+        height: 780px;
+        width: 100%;
+        max-width: 2000px;
+    }
+
+    .FooterLinks {
+        margin-left: 70px;
+    }
+</style>
+
+<div class="embed-responsive embed-responsive-16by9">
+    <div style="max-width: 100%; overflow: hidden;background-color: #FBFBFB">
+        <div style="max-width: 969px; float: left;">
+            <img src="~/Images/header-menu-new1.jpg" style="max-width:969px" />
+        </div>
+        <div style="float:right ">
+            <table style="margin-left:11px">
+                <tr>
+                    <td class="Hyper"><a href=""><h4 style="font-size: 16px; color: black; font-family: Arial, Helvetica, sans-serif;"><b style="font-size: 12px"><a title="Login to IXDot Platform" target="_blank" href="https://ixdot.azurewebsites.net/dealer">Login</a></b></h4></a></td>
+                    <td style="height: 92px;width: 17%;">&nbsp;&nbsp;<img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /> </td>
+
+
+                    <td>
+                        <div id="google_translate_element"></div>
+                    </td>
+                </tr>
+
+            </table>
+            @*<table style="margin-left:11px">
+                    <tr>
+                        <td class="Hyper"><a href=""><h4 style="font-size: 16px; color: black; font-family: Arial, Helvetica, sans-serif;"><b style="font-size: 12px">Login</b></h4></a></td>
+                        <td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+                        <td class="Hyper"><a href=""><h4 style="font-size: 16px; color: black; font-family: Arial, Helvetica, sans-serif;"><b style="font-size: 12px">SignUp</b></h4></a></td>
+                    </tr>
+                </table>*@
+
+            @*<div style="margin-left:10px ">
+                    <input id="add" type="text" data-role="none" placeholder="Search" style="max-width:155px; height: 10px; margin: 34px 11px 0px 0px;" />
+                </div>*@
+        </div>
+    </div>
+
+    <nav style="font-family:georgia">
+        <ul id='menu'>
+            <li>
+                <a class='prett' href='/'>About Us <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /> </a>
+                <ul class='menus'>
+                    <li class='has-submenu'>
+                        <a class='home' href="@Url.Action("ManagementTeam","Home")" title='Management Team'>Management Team</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a class='prett' href="" title='Our Products'>Our Products <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a>
+                <ul class='menus'>
+                    <li class='has-submenu'>
+                        <a class='prett' href="@Url.Action("ColIntro","Home")" title='Collateral Swap'>Collateral Swap</a>
+                        <ul class='submenu'>
+                            <li><a href="@Url.Action("ColIntro","Home")" title="Introduction">Introduction</a></li>
+                            <li><a href="@Url.Action("CollateralSwap","Home")" title="Collateral Swap">Collateral Swap</a></li>
+                            <li><a href="@Url.Action("CollateralSwapPlatform","Home")" title="Collateral Swap Platform">Collateral Swap Platform</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a class='prett' href="@Url.Action("RepoIntro","Home")" title='Repurchase Agreement'>Repurchase Agreements</a>
+                        <ul class='submenu' style="width:auto">
+                            <li><a style="width: 325px;" href="@Url.Action("RepoIntro","Home")" title="Repurchase Agreements (REPO) & Liquidity Management">Repurchase Agreements & Liquidity Management</a></li>
+                            <li><a href="@Url.Action("Repurchase","Home")" title="Repurchase Agreements">Repurchase Agreements</a></li>
+                            <li><a href="@Url.Action("RepurchasePlatform","Home")" title="Repurchase Agreements Platform">Repurchase Agreements Platform</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a class='ContactUs' href="@Url.Action("ContactUs","Home")">Contact Us <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Our Partners <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>FAQs <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Blogs <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Suggested Links <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Testimonials <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Legal Documentation </a></li>
+
+        </ul>
+    </nav>
+
+
+</div>
+
+<div class="container body-content">
+    <div class="item active">
+        <img src="~/Images/Banner-2.jpg" style="width: 100%;" />
+    </div>
+</div>
+
+@*<p style="background-color:#2EBDEC;width:118px;color:white;text-align:center;height:40px;padding:9px; margin-top: 14px;font-size:16px;margin-left:268px;">Enquiry</p>*@
+
+<div style="height:35px;"></div>
+
+<table style="width:100%;">
+    @*<tr>
+        <td><p style="background-color:#2EBDEC;width:118px;color:white;text-align:center;height:40px;padding:9px; margin-top: 14px;font-size:16px;">Enquiry</p></td>
+        <td></td>
+    </tr>*@
+    <tr>
+        <td style="width:75%">
+            <div>
+                <form id="focus">
+                    <p style="background-color:#2EBDEC;width:388px;color:white;text-align:center;height:40px;padding:9px; margin:auto; font-size:16px;">Enquiry</p>
+                    <div style="height:20px;"></div>
+                    <table style="margin:auto">
+                        <tr style="height: 38px;">
+                            <td>Name</td>
+                            @*<td>&nbsp;<b>:</b>&nbsp;</td>*@
+                            <td style="padding-left:25px;"><input type="text" style="width:280px;" /></td>
+                        </tr>
+                        <tr style="height: 38px;">
+                            <td>Email Id</td>
+                            @*<td>&nbsp;<b>:</b>&nbsp;</td>*@
+                            <td style="padding-left:25px;"><input type="email" style="width:280px;" /></td>
+                        </tr>
+                        <tr style="height: 38px;">
+                            <td>Country</td>
+                            @*<td>&nbsp;<b>:</b>&nbsp;</td>*@
+                            <td style="padding-left:25px;">
+                                <select name="Country" id="" style="height: 30px;width:280px;">
+                                    <option selected="selected" value="">Select Country</option>
+                                    <option value="AF">Afghanistan</option>
+                                    <option value="AL">Albania</option>
+                                    <option value="DZ">Algeria</option>
+                                    <option value="AS">American Samoa</option>
+                                    <option value="AD">Andorra</option>
+                                    <option value="AO">Angola</option>
+                                    <option value="AI">Anguilla</option>
+                                    <option value="AQ">Antarctica</option>
+                                    <option value="AG">Antigua And Barbuda</option>
+                                    <option value="AR">Argentina</option>
+                                    <option value="AM">Armenia</option>
+                                    <option value="AW">Aruba</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="AT">Austria</option>
+                                    <option value="AZ">Azerbaijan</option>
+                                    <option value="BS">Bahamas</option>
+                                    <option value="BH">Bahrain</option>
+                                    <option value="BD">Bangladesh</option>
+                                    <option value="BB">Barbados</option>
+                                    <option value="BY">Belarus</option>
+                                    <option value="BE">Belgium</option>
+                                    <option value="BZ">Belize</option>
+                                    <option value="BJ">Benin</option>
+                                    <option value="BM">Bermuda</option>
+                                    <option value="BT">Bhutan</option>
+                                    <option value="BO">Bolivia</option>
+                                    <option value="BA">Bosnia And Herzegowina</option>
+                                    <option value="BW">Botswana</option>
+                                    <option value="BV">Bouvet Island</option>
+                                    <option value="BR">Brazil</option>
+                                    <option value="IO">British Indian Ocean Territory</option>
+                                    <option value="BN">Brunei Darussalam</option>
+                                    <option value="BG">Bulgaria</option>
+                                    <option value="BF">Burkina Faso</option>
+                                    <option value="BI">Burundi</option>
+                                    <option value="KH">Cambodia</option>
+                                    <option value="CM">Cameroon</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="CV">Cape Verde</option>
+                                    <option value="KY">Cayman Islands</option>
+                                    <option value="CF">Central African Republic</option>
+                                    <option value="TD">Chad</option>
+                                    <option value="CL">Chile</option>
+                                    <option value="CN">China</option>
+                                    <option value="CX">Christmas Island</option>
+                                    <option value="CC">Cocos (Keeling) Islands</option>
+                                    <option value="CO">Colombia</option>
+                                    <option value="KM">Comoros</option>
+                                    <option value="CG">Congo</option>
+                                    <option value="CK">Cook Islands</option>
+                                    <option value="CR">Costa Rica</option>
+                                    <option value="CI">Cote D'Ivoire</option>
+                                    <option value="HR">Croatia (Local Name: Hrvatska)</option>
+                                    <option value="CU">Cuba</option>
+                                    <option value="CY">Cyprus</option>
+                                    <option value="CZ">Czech Republic</option>
+                                    <option value="DK">Denmark</option>
+                                    <option value="DJ">Djibouti</option>
+                                    <option value="DM">Dominica</option>
+                                    <option value="DO">Dominican Republic</option>
+                                    <option value="TP">East Timor</option>
+                                    <option value="EC">Ecuador</option>
+                                    <option value="EG">Egypt</option>
+                                    <option value="SV">El Salvador</option>
+                                    <option value="GQ">Equatorial Guinea</option>
+                                    <option value="ER">Eritrea</option>
+                                    <option value="EE">Estonia</option>
+                                    <option value="ET">Ethiopia</option>
+                                    <option value="FK">Falkland Islands (Malvinas)</option>
+                                    <option value="FO">Faroe Islands</option>
+                                    <option value="FJ">Fiji</option>
+                                    <option value="FI">Finland</option>
+                                    <option value="FR">France</option>
+                                    <option value="GF">French Guiana</option>
+                                    <option value="PF">French Polynesia</option>
+                                    <option value="TF">French Southern Territories</option>
+                                    <option value="GA">Gabon</option>
+                                    <option value="GM">Gambia</option>
+                                    <option value="GE">Georgia</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="GH">Ghana</option>
+                                    <option value="GI">Gibraltar</option>
+                                    <option value="GR">Greece</option>
+                                    <option value="GL">Greenland</option>
+                                    <option value="GD">Grenada</option>
+                                    <option value="GP">Guadeloupe</option>
+                                    <option value="GU">Guam</option>
+                                    <option value="GT">Guatemala</option>
+                                    <option value="GN">Guinea</option>
+                                    <option value="GW">Guinea-Bissau</option>
+                                    <option value="GY">Guyana</option>
+                                    <option value="HT">Haiti</option>
+                                    <option value="HM">Heard And Mc Donald Islands</option>
+                                    <option value="VA">Holy See (Vatican City State)</option>
+                                    <option value="HN">Honduras</option>
+                                    <option value="HK">Hong Kong</option>
+                                    <option value="HU">Hungary</option>
+                                    <option value="IS">Icel And</option>
+                                    <option value="IN">India</option>
+                                    <option value="ID">Indonesia</option>
+                                    <option value="IR">Iran (Islamic Republic Of)</option>
+                                    <option value="IQ">Iraq</option>
+                                    <option value="IE">Ireland</option>
+                                    <option value="IL">Israel</option>
+                                    <option value="IT">Italy</option>
+                                    <option value="JM">Jamaica</option>
+                                    <option value="JP">Japan</option>
+                                    <option value="JO">Jordan</option>
+                                    <option value="KZ">Kazakhstan</option>
+                                    <option value="KE">Kenya</option>
+                                    <option value="KI">Kiribati</option>
+                                    <option value="KP">Korea, Dem People'S Republic</option>
+                                    <option value="KR">Korea, Republic Of</option>
+                                    <option value="KW">Kuwait</option>
+                                    <option value="KG">Kyrgyzstan</option>
+                                    <option value="LA">Lao People'S Dem Republic</option>
+                                    <option value="LV">Latvia</option>
+                                    <option value="LB">Lebanon</option>
+                                    <option value="LS">Lesotho</option>
+                                    <option value="LR">Liberia</option>
+                                    <option value="LY">Libyan Arab Jamahiriya</option>
+                                    <option value="LI">Liechtenstein</option>
+                                    <option value="LT">Lithuania</option>
+                                    <option value="LU">Luxembourg</option>
+                                    <option value="MO">Macau</option>
+                                    <option value="MK">Macedonia</option>
+                                    <option value="MG">Madagascar</option>
+                                    <option value="MW">Malawi</option>
+                                    <option value="MY">Malaysia</option>
+                                    <option value="MV">Maldives</option>
+                                    <option value="ML">Mali</option>
+                                    <option value="MT">Malta</option>
+                                    <option value="MH">Marshall Islands</option>
+                                    <option value="MQ">Martinique</option>
+                                    <option value="MR">Mauritania</option>
+                                    <option value="MU">Mauritius</option>
+                                    <option value="YT">Mayotte</option>
+                                    <option value="MX">Mexico</option>
+                                    <option value="FM">Micronesia, Federated States</option>
+                                    <option value="MD">Moldova, Republic Of</option>
+                                    <option value="MC">Monaco</option>
+                                    <option value="MN">Mongolia</option>
+                                    <option value="MS">Montserrat</option>
+                                    <option value="MA">Morocco</option>
+                                    <option value="MZ">Mozambique</option>
+                                    <option value="MM">Myanmar</option>
+                                    <option value="NA">Namibia</option>
+                                    <option value="NR">Nauru</option>
+                                    <option value="NP">Nepal</option>
+                                    <option value="NL">Netherlands</option>
+                                    <option value="AN">Netherlands Ant Illes</option>
+                                    <option value="NC">New Caledonia</option>
+                                    <option value="NZ">New Zealand</option>
+                                    <option value="NI">Nicaragua</option>
+                                    <option value="NE">Niger</option>
+                                    <option value="NG">Nigeria</option>
+                                    <option value="NU">Niue</option>
+                                    <option value="NF">Norfolk Island</option>
+                                    <option value="MP">Northern Mariana Islands</option>
+                                    <option value="NO">Norway</option>
+                                    <option value="OM">Oman</option>
+                                    <option value="PK">Pakistan</option>
+                                    <option value="PW">Palau</option>
+                                    <option value="PA">Panama</option>
+                                    <option value="PG">Papua New Guinea</option>
+                                    <option value="PY">Paraguay</option>
+                                    <option value="PE">Peru</option>
+                                    <option value="PH">Philippines</option>
+                                    <option value="PN">Pitcairn</option>
+                                    <option value="PL">Poland</option>
+                                    <option value="PT">Portugal</option>
+                                    <option value="PR">Puerto Rico</option>
+                                    <option value="QA">Qatar</option>
+                                    <option value="RE">Reunion</option>
+                                    <option value="RO">Romania</option>
+                                    <option value="RU">Russian Federation</option>
+                                    <option value="RW">Rwanda</option>
+                                    <option value="KN">Saint K Itts And Nevis</option>
+                                    <option value="LC">Saint Lucia</option>
+                                    <option value="VC">Saint Vincent, The Grenadines</option>
+                                    <option value="WS">Samoa</option>
+                                    <option value="SM">San Marino</option>
+                                    <option value="ST">Sao Tome And Principe</option>
+                                    <option value="SA">Saudi Arabia</option>
+                                    <option value="SN">Senegal</option>
+                                    <option value="YU">Serbia</option>
+                                    <option value="SC">Seychelles</option>
+                                    <option value="SL">Sierra Leone</option>
+                                    <option value="SG">Singapore</option>
+                                    <option value="SK">Slovakia (Slovak Republic)</option>
+                                    <option value="SI">Slovenia</option>
+                                    <option value="SB">Solomon Islands</option>
+                                    <option value="SO">Somalia</option>
+                                    <option value="ZA">South Africa</option>
+                                    <option value="GS">South Georgia , S Sandwich Is.</option>
+                                    <option value="ES">Spain</option>
+                                    <option value="LK">Sri Lanka</option>
+                                    <option value="SH">St. Helena</option>
+                                    <option value="PM">St. Pierre And Miquelon</option>
+                                    <option value="SD">Sudan</option>
+                                    <option value="SR">Suriname</option>
+                                    <option value="SJ">Svalbard, Jan Mayen Islands</option>
+                                    <option value="SZ">Sw Aziland</option>
+                                    <option value="SE">Sweden</option>
+                                    <option value="CH">Switzerland</option>
+                                    <option value="SY">Syrian Arab Republic</option>
+                                    <option value="TW">Taiwan</option>
+                                    <option value="TJ">Tajikistan</option>
+                                    <option value="TZ">Tanzania, United Republic Of</option>
+                                    <option value="TH">Thailand</option>
+                                    <option value="TG">Togo</option>
+                                    <option value="TK">Tokelau</option>
+                                    <option value="TO">Tonga</option>
+                                    <option value="TT">Trinidad And Tobago</option>
+                                    <option value="TN">Tunisia</option>
+                                    <option value="TR">Turkey</option>
+                                    <option value="TM">Turkmenistan</option>
+                                    <option value="TC">Turks And Caicos Islands</option>
+                                    <option value="TV">Tuvalu</option>
+                                    <option value="UG">Uganda</option>
+                                    <option value="UA">Ukraine</option>
+                                    <option value="AE">United Arab Emirates</option>
+                                    <option value="GB">United Kingdom</option>
+                                    <option value="US">United States</option>
+                                    <option value="UM">United States Minor Is.</option>
+                                    <option value="UY">Uruguay</option>
+                                    <option value="UZ">Uzbekistan</option>
+                                    <option value="VU">Vanuatu</option>
+                                    <option value="VE">Venezuela</option>
+                                    <option value="VN">Viet Nam</option>
+                                    <option value="VG">Virgin Islands (British)</option>
+                                    <option value="VI">Virgin Islands (U.S.)</option>
+                                    <option value="WF">Wallis And Futuna Islands</option>
+                                    <option value="EH">Western Sahara</option>
+                                    <option value="YE">Yemen</option>
+                                    <option value="ZR">Zaire</option>
+                                    <option value="ZM">Zambia</option>
+                                    <option value="ZW">Zimbabwe</option>
+
+                                </select>
+                            </td>
+                        </tr>
+                        <tr style="height: 38px;">
+                            <td>Contact No</td>
+                            @*<td>&nbsp;<b>:</b>&nbsp;</td>*@
+                            <td style="padding-left:25px;"><input type="number" style="width:280px;" /></td>
+                        </tr>
+                        <tr style="height: 38px;">
+                            <td style="padding-bottom: 9px;">Enquiry Topic</td>
+                            @*<td style="padding-bottom: 9px;">&nbsp;<b>:</b>&nbsp;</td>*@
+                            <td style="height: 48px;padding-left:25px;">
+
+                                <div>
+                                    <input type="radio" id="Collateral" value="Collateral Swap" name="group9dot" />&nbsp;&nbsp;Collateral Swap<br />
+                                    <input type="radio" id="Repo" value="Repurchase" name="group9dot" style="margin-bottom: 13px;" />&nbsp;&nbsp;Repurchase Agreements
+                                </div>
+                            </td>
+                        </tr>
+                        <tr style="height: 38px;">
+                            <td>Message</td>
+                            @*<td>&nbsp;<b>:</b>&nbsp;</td>*@
+                            <td style="padding-left:25px;"><textarea name="Text1" cols="40" rows="5"></textarea></td>
+                        </tr>
+                        <tr style="height: 38px;">
+                            <td></td>
+                            <td style="padding-left:30px;"><input type="submit" style="margin-top: 23px;" /></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </td>
+
+        <td valign="top" style="width:25%">
+            <table style="background-color: #e2e3e4;">
+                <tr>
+                    <td >
+                        <div style="background-color:#2EBDEC;width:300px;color:white;height:40px;padding:9px; font-size:16px">Contact Us</div>
+                        <div style="width:100%; margin-top: 14px; padding-left: 9px;">
+                            <b>IXDot Pte Ltd</b>
+                            <p style="font-size: 15px">
+                                1, Coleman Street, #10-06,<br />
+                                The Adelphi, Singapore 179803
+                                <br />
+                                <table>
+                                    <tr>
+                                        <td>Contact No.</td>
+                                        <td>&nbsp;:&nbsp;</td>
+                                        <td>xxxxxxxxxxx</td>
+                                    </tr>
+                                    <tr>
+                                        <td>E-mail</td>
+                                        <td>&nbsp;:&nbsp;</td>
+                                        <td>xxxxxxx@ixdotco.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Website</td>
+                                        <td>&nbsp;:&nbsp;</td>
+                                        <td>www.ixdotco.com</td>
+                                    </tr>
+                                </table>
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<div style="height:75px"></div>
+<p style="background-color:#2EBDEC;width:165px;color:white;text-align:center;height:40px;padding:9px; margin-top: 14px;font-size:16px">
+    Contact Info
+</p>
+
+<div style="width:100%;font-family:calibri;font-size:16px">
+    <table>
+        <tr>
+            <td>
+                <div style="width:100%;padding-left: 40px">
+                    <b>Clement Ooi(CEO)</b>
+                    <p style="font-size: 15px">
+                        1, Coleman Street, #10-06,<br />
+                        The Adelphi, Singapore 179803
+                        <br /><br />
+                        <table>
+                            <tr>
+                                <td>Contact No.</td>
+                                <td>&nbsp;:&nbsp;</td>
+                                <td>+65 9816 7771</td>
+                            </tr>
+                            <tr>
+                                <td>E-mail</td>
+                                <td>&nbsp;:&nbsp;</td>
+                                <td>clement.ooi@ixdotco.com</td>
+                            </tr>
+                            <tr>
+                                <td>Website</td>
+                                <td>&nbsp;:&nbsp;</td>
+                                <td>www.ixdotco.com</td>
+                            </tr>
+                        </table>
+                        @*Contact No.:&nbsp;+65 9816 7771<br />
+                            E-mail:&nbsp;clement.ooi@ixdotco.com<br />
+                            Website:&nbsp;www.ixdotco.com<br />*@
+                    </p>
+                </div>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <div style="width:100%;padding-left: 50px">
+                                <b>Yvonne Chow (CFO)</b>
+                                <p style="font-size: 15px">
+                                    1, Coleman Street, #10-06,<br />
+                                    The Adelphi, Singapore 179803
+                                    <br /><br />
+                                    <table>
+                                        <tr>
+                                            <td>Contact No.</td>
+                                            <td>&nbsp;:&nbsp;</td>
+                                            <td>+65 6589-8186</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E-mail</td>
+                                            <td>&nbsp;:&nbsp;</td>
+                                            <td>yvonne.chow@ixdotco.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Website</td>
+                                            <td>&nbsp;:&nbsp;</td>
+                                            <td>www.ixdotco.com</td>
+                                        </tr>
+                                    </table>
+                                    @*Contact No.:&nbsp;+65 6589-8186<br />
+                                        E-mail:&nbsp;yvonne.chow@ixdotco.com<br />
+                                        Website:&nbsp;www.ixdotco.com<br />*@
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <div style="width:100%;padding-left: 50px">
+                                <b>Ramkumar (CTO)</b>
+                                <p style="font-size: 15px">
+                                    1, Coleman Street, #10-06,<br />
+                                    The Adelphi, Singapore 179803
+                                    <br /><br />
+                                    <table>
+                                        <tr>
+                                            <td>Contact No.</td>
+                                            <td>&nbsp;:&nbsp;</td>
+                                            <td>+91 98400 26834</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E-mail</td>
+                                            <td>&nbsp;:&nbsp;</td>
+                                            <td>ram.ranga@ixdotco.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Website</td>
+                                            <td>&nbsp;:&nbsp;</td>
+                                            <td>www.ixdotco.com</td>
+                                        </tr>
+                                    </table>
+                                    @*Contact No.:&nbsp;+91 98400 26834<br />
+                                        E-mail:&nbsp;ram.ranga@ixdotco.com<br />
+                                        Website:&nbsp;www.ixdotco.com<br />*@
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <div style="width:100%;padding-left: 50px; margin-top:0px">
+                                <b>Guan Seng Khoo (Academic Advisor)</b>
+                                <p style="font-size: 15px">
+                                    1, Coleman Street, #10-06,<br />
+                                    The Adelphi, Singapore 179803
+                                    <br /><br />
+                                    <table>
+                                        <tr>
+                                            <td>Contact No.</td>
+                                            <td>&nbsp;:&nbsp;</td>
+                                            <td>+65 0000-0000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>E-mail</td>
+                                            <td>&nbsp;:&nbsp;</td>
+                                            <td>xxxxxxxxx@ixdotco.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Website</td>
+                                            <td>&nbsp;:&nbsp;</td>
+                                            <td>www.ixdotco.com</td>
+                                        </tr>
+                                    </table>
+                                    @*Contact No.:&nbsp;+65 0000-0000<br />
+                                        E-mail:&nbsp;xxxxxxxxx@ixdotco.com<br />
+                                        Website:&nbsp;www.ixdotco.com<br />*@
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<br />
+
+<div class="footer embed-responsive embed-responsive-16by9" style="padding-top: 16px; padding-bottom: 14px;">
+    <table style="width:100%">
+        <tr>
+            <td style="width:132px;" valign="top">
+                <p style="padding-left:21px">Quick Navigation</p>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 20px;" /><div class="FooterLinks" style="margin-bottom: 11px"><a href="@Url.Action("Home","Home")" style="color:white;margin-left: -26px">About Us</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 20px;" /><div class="FooterLinks" style="color:white;margin-bottom: 11px"><a style="margin-left: -27px;color:white">Our Partners</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 20px;" /><div class="FooterLinks" style="margin-bottom: 11px"><a href="@Url.Action("ColIntro","Home")" style="color:white;margin-left: -26px">Our Products</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 20px;" /><div class="FooterLinks" style="margin-bottom: 11px;color:white"><a style="margin-left: -27px;color:white">FAQs</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 20px;" /><div class="FooterLinks" style="margin-bottom: 11px"><a href="@Url.Action("ContactUs","Home")" style="color:white;margin-left: -26px">ContactUs</a></div>
+            </td>
+
+            <td style="width:207px;padding-bottom:4px">
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 38px;" /><div class="FooterLinks" style="color:white;margin-bottom: 11px"><a style="margin-left: -11px;color:white">Blogs</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 38px;" /><div class="FooterLinks" style="color:white;margin-bottom: 11px"><a style="margin-left: -11px;color:white">Suggested Links</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 38px;" /><div class="FooterLinks" style="color:white;margin-bottom: 11px"><a style="margin-left: -11px;color:white">Testimonials</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 38px;" /><div class="FooterLinks" style="color:white;margin-bottom: 11px"><a style="margin-left: -11px;color:white">Legal Documentation</a></div>
+            </td>
+
+
+            <td style="padding-left: 175px;">
+                <p style="">Contact Info</p>
+
+                <p style="font-size: 12px">
+                    <img src="~/Images/location.png" />&nbsp;&nbsp;
+                    1, Coleman Street, #10-06,<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    The Adelphi,<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Singapore 179803
+                </p>
+
+                <p style="font-size: 12px">
+                    <img src="~/Images/call1.png" />&nbsp;&nbsp;
+                    +65 6589-8186
+                </p>
+                <p style="font-size: 12px">
+                    <img src="~/Images/mail.png" />&nbsp;&nbsp;
+                    yvonne.chow@ixdotco.com<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;www.ixdotco.com
+                </p>
+            </td>
+            <td style="font-size: 12px;padding-left:333px;color:#46bddf;top: 169px;position: relative;float: right; left:-15px">
+                © Copyrights @DateTime.Now.Year .All Rights Reserved.
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

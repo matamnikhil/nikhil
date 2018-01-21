@@ -1,0 +1,291 @@
+﻿
+@{
+    ViewBag.Title = "CollateralSwapPlatform";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link href="~/Content/CoSwapApp.css" rel="stylesheet" />
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/bootstrap.min.js"></script>
+<script src="~/scripts/modernizr-2.6.2.js"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<style>
+    .footer {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #474546;
+        color: white;
+    }
+
+  td.Hyper a:hover{
+       text-decoration:none;
+   }
+
+   .container {
+    max-width: 2000px;
+    padding: 0;
+}
+
+     body
+{
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+    height: 780px;
+    width: 100%;
+    max-width:2000px;
+}
+
+    .FooterLinks {
+    margin-left: 70px;
+    }
+
+</style>
+<div class="embed-responsive embed-responsive-16by9">
+    <div style="max-width: 100%; overflow: hidden;background-color: #FBFBFB">
+        <div style="max-width: 969px; float: left;">
+            <img src="~/Images/header-menu-new1.jpg" style="max-width:969px" />
+        </div>
+        <div style="float:right ">
+            <table style="margin-left:11px">
+                <tr>
+                    <td class="Hyper"><a href=""><h4 style="font-size: 16px; color: black; font-family: Arial, Helvetica, sans-serif;"><b style="font-size: 12px"><a target="_blank" href="https://ixdot.azurewebsites.net/dealer">Login</a></b></h4></a></td>
+                    <td style="height: 92px;width: 17%;">&nbsp;&nbsp;<img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /> </td>
+
+
+                    <td>
+                        <div id="google_translate_element"></div>
+                    </td>
+                </tr>
+
+            </table>
+            @*<table style="margin-left:11px">
+                    <tr>
+                        <td class="Hyper"><a href=""><h4 style="font-size: 16px; color: black; font-family: Arial, Helvetica, sans-serif;"><b style="font-size: 12px">Login</b></h4></a></td>
+                        <td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+                        <td class="Hyper"><a href=""><h4 style="font-size: 16px; color: black; font-family: Arial, Helvetica, sans-serif;"><b style="font-size: 12px">SignUp</b></h4></a></td>
+                    </tr>
+                </table>*@
+
+            @*<div style="margin-left:10px ">
+                    <input id="add" type="text" data-role="none" placeholder="Search" style="max-width:155px; height: 10px; margin: 34px 11px 0px 0px;" />
+                </div>*@
+        </div>
+    </div>
+
+    <nav>
+        <ul id='menu'>
+            <li>
+                <a class='prett' href='/'>About Us <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /> </a>
+                <ul class='menus'>
+                    <li class='has-submenu'>
+                        <a class='home' href="@Url.Action("ManagementTeam","Home")" title='Management Team'>Management Team</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a class='prett' href="" title='Our Products'>Our Products <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a>
+                <ul class='menus'>
+                    <li class='has-submenu'>
+                        <a class='prett' href="@Url.Action("ColIntro","Home")" title='Collateral Swap'>Collateral Swap</a>
+                        <ul class='submenu'>
+                            <li><a href="@Url.Action("ColIntro","Home")" title="Introduction">Introduction</a></li>
+                            <li><a href="@Url.Action("CollateralSwap","Home")" title="Collateral Swap">Collateral Swap</a></li>
+                            <li><a href="@Url.Action("CollateralSwapPlatform","Home")" title="Collateral Swap Platform">Collateral Swap Platform</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a class='prett' href="@Url.Action("RepoIntro","Home")" title='Repurchase Agreement'>Repurchase Agreements</a>
+                        <ul class='submenu' style="width:auto">
+                            <li><a style="width: 325px;" href="@Url.Action("RepoIntro","Home")" title="Repurchase Agreements (REPO) & Liquidity Management">Repurchase Agreements & Liquidity Management</a></li>
+                            <li><a href="@Url.Action("Repurchase","Home")" title="Repurchase Agreements">Repurchase Agreements</a></li>
+                            <li><a href="@Url.Action("RepurchasePlatform","Home")" title="Repurchase Agreements Platform">Repurchase Agreements Platform</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a class='ContactUs' href="@Url.Action("ContactUs","Home")">Contact Us <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Our Partners <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>FAQs <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Blogs <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Suggested Links <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Testimonials <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Legal Documentation </a></li>
+
+        </ul>
+    </nav>
+
+
+</div>
+
+    @*<div class="w3-content w3-section" style="width:100%">
+        <div class="item active">
+
+            <img src="~/Images/banner_coswap.jpg" style="width: 100%;">
+
+        </div>
+    </div>*@
+
+
+
+    @*<div data-role="main" class="ui-content embed-responsive embed-responsive-16by9">
+        <p style="background-color:#835596;width:250px;color:white;text-align:center;height:40px;padding:10px">CollateralSwap Platform</p>
+    </div>
+    <div></div>*@
+    <div style="height:40px;padding-top: 9px;margin-left: 14px;">
+        <span style="color:#68B3EB;font-family:Calibri">Our Products</span>&nbsp;<b>></b>&nbsp;<a href="@Url.Action("CollateralSwapPlatform","Home")" style="color:#68B3EB;font-family:Calibri">Collateral Swap</a>&nbsp;<b>></b>&nbsp;<span style="font-family:Calibri">Collateral Swap Platform</span>
+    </div>
+
+<table>
+    <tr>
+        <td valign="top" style="width:20%; background-color:#e2e3e4">
+            <ul style="font-family:Calibri">
+                <li style="margin-left:-12px;margin-top: 46px;">
+                    Collateral Swap
+                    <ul>
+                        <li style="margin-left:-23px;height: auto;"><a href="@Url.Action("ColIntro","Home")" title="Collateral Swap">An Appreciation of Collateral Swap</a></li>
+                        <li style="margin-left:-23px;height: auto;"><a href="@Url.Action("CollateralSwap","Home")" title="Collateral Swap">Collateral Swap</a></li>
+                        <li style="margin-left:-23px;height: auto;"><u>Collateral Swap Platform</u></li>
+                    </ul>
+                </li>
+
+                <li style="margin-left:-12px;margin-top: 14px;">
+                    Repurchase Agreement
+                    <ul>
+                        <li style="margin-left:-23px;height: auto;"><a style="width: 325px;" href="@Url.Action("RepoIntro","Home")" title="Repurchase Agreements (REPO) & Liquidity Management">Repurchase Agreements & Liquidity Management</a></li>
+                        <li style="margin-left:-23px;height: auto;"><a href="@Url.Action("Repurchase","Home")" title="Repurchase Agreements">Repurchase Agreements</a></li>
+                        <li style="margin-left:-23px;height: auto;"><a href="@Url.Action("RepurchasePlatform","Home")" title="Repurchase Agreements Platform">Repurchase Agreements Platform</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </td>
+        <td style="width:80%">
+            <p style="background-color:#835596;width:173px;color:white;text-align:center;height:40px;padding:10px; margin-top: 0px;margin-left: 30px;">CollateralSwap Platform</p>
+
+            <div>
+                <img src="~/Images/plat11.jpg" style="display: block;margin: auto; width: 95%;" />
+
+            </div>
+            <br />
+            <div style="text-align: justify;margin: 2px 35px;font-family:calibri;font-size:16px;">
+                This application platform, named Co-Swap (Collateral Swap) is designed as an inter-bank trading
+                platform meant for users to exchange collateral via a swap transaction. Primary users of this
+                application will be treasury dealers with Banks. Secondary users will be the fund managers with
+                asset management companies, insurers, pension funds, hedge funds, family offices etc. The main
+                objective for using this application is for users to manage their pool of quality assets that financial
+                institutions hold by changing its quantity based on a collateral hierarchy maintained by the users.<br /><br />
+                The platform is not restricted to banks who are governed by liquidity thresholds but can also be used
+                by any participant who has a need to either improve its liquidity position to meet regulatory liquidity
+                rules, or augment its yields.<br /><br />
+                The platform provides a framework of asset portfolios that participants can peruse, provide pricing
+                indicators, and ultimately trade to manage their liquidity profiles. The platform brings together
+                participants with surplus liquidity and matches them with those who have a need to improve their
+                liquidity position, and vice versa. The economic ownership of the assets remain vested with the
+                counterparties and there is no need therefore for a sale.<br /><br />
+            </div>
+            <div style="text-align: justify;margin: 2px 35px;font-family:calibri;font-size:16px;">
+                From a borrower (bank with a need for liquidity) perspective, the following considerations accrue:<br />
+                <div style="text-align: justify;margin: 2px 35px;font-family:calibri;font-size:16px;">
+                    <ul>
+                        <li>
+                            improves liquidity quickly
+                        </li>
+                        <li>
+                            It is cheaper than liquidating low quality assets for higher quality
+                        </li>
+                        <li>
+                            It provides the borrower with multiple choices and avenues
+                        </li>
+                        <li>
+                            It provides an uptick in the LCR metric immediately if the swap holding period is less than 30
+                            days and improves NSFR if the period is less than a year
+                        </li>
+                        <li>
+                            The transaction is Central Bank approved
+                        </li>
+                    </ul>
+                </div>
+                From the standpoint of the liquidity provider, the following considerations merit a mention:<br />
+                <div style="padding-left:20px;text-align: justify;margin: 2px 35px;font-family:calibri;font-size:16px;">
+                    • &nbsp;&nbsp;&nbsp; It provides yield enhancing opportunities<br />
+                    • &nbsp;&nbsp;&nbsp; The bank receives insurance for providing liquidity through over-collateralisation or
+                    additional margining<br />
+                    • &nbsp;&nbsp;&nbsp; In the event of counterparty default, the lower quality asset is available for liquidation<br />
+                    • &nbsp;&nbsp;&nbsp; It provides a comparison of yields from various borrowers<br /><br />
+                </div>
+                Co-Swap works on a stand-alone basis as a trading platform and can be bundled with Kamakura
+                Corporation’s KRIS (Kamakura Risk Information Services) providing a comprehensive trading
+                platform and risk management capabilities.
+
+            </div>
+        </td>
+    </tr>
+</table>
+     <br />
+<div class="footer embed-responsive embed-responsive-16by9" style="padding-top: 16px; padding-bottom: 14px;">
+    <table style="width:100%">
+        <tr>
+            <td style="width:132px;" valign="top">
+                <p style="padding-left:21px">Quick Navigation</p>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 20px;" /><div class="FooterLinks" style="margin-bottom: 11px"><a href="@Url.Action("Home","Home")" style="color:white;margin-left: -26px">About Us</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 20px;" /><div class="FooterLinks" style="color:white;margin-bottom: 11px"><a style="margin-left: -27px;color:white">Our Partners</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 20px;" /><div class="FooterLinks" style="margin-bottom: 11px"><a href="@Url.Action("ColIntro","Home")" style="color:white;margin-left: -26px">Our Products</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 20px;" /><div class="FooterLinks" style="margin-bottom: 11px;color:white"><a style="margin-left: -27px;color:white">FAQs</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 20px;" /><div class="FooterLinks" style="margin-bottom: 11px"><a href="@Url.Action("ContactUs","Home")" style="color:white;margin-left: -26px">ContactUs</a></div>
+            </td>
+
+            <td style="width:207px;padding-bottom:4px">
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 38px;" /><div class="FooterLinks" style="color:white;margin-bottom: 11px"><a style="margin-left: -11px;color:white">Blogs</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 38px;" /><div class="FooterLinks" style="color:white;margin-bottom: 11px"><a style="margin-left: -11px;color:white">Suggested Links</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 38px;" /><div class="FooterLinks" style="color:white;margin-bottom: 11px"><a style="margin-left: -11px;color:white">Testimonials</a></div>
+                <img src="~/Images/bullet.png" style="width: 7px; float:left; margin-top: 5px; margin-left: 38px;" /><div class="FooterLinks" style="color:white;margin-bottom: 11px"><a style="margin-left: -11px;color:white">Legal Documentation</a></div>
+            </td>
+
+
+            <td style="padding-left: 175px;">
+                <p style="">Contact Info</p>
+
+                <p style="font-size: 12px">
+                    <img src="~/Images/location.png" />&nbsp;&nbsp;
+                    1, Coleman Street, #10-06,<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    The Adelphi,<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Singapore 179803
+                </p>
+
+                <p style="font-size: 12px">
+                    <img src="~/Images/call1.png" />&nbsp;&nbsp;
+                    +65 6589-8186
+                </p>
+                <p style="font-size: 12px">
+                    <img src="~/Images/mail.png" />&nbsp;&nbsp;
+                    yvonne.chow@ixdotco.com<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;www.ixdotco.com
+                </p>
+            </td>
+            <td style="font-size: 12px;padding-left:333px;color:#46bddf;top: 169px;position: relative;float: right; left:-15px">
+                © Copyrights @DateTime.Now.Year .All Rights Reserved.
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+

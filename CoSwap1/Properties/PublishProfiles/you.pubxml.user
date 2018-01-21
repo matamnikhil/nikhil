@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\CG-DTE\Desktop\NikhilWeb</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>12/21/2017 14:53:05</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>12/21/2017 14:53:05</publishTime>
+    </File>
+    <File Include="bin/CoSwap1.dll">
+      <publishTime>01/08/2018 23:02:58</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>12/07/2015 19:04:38</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>03/10/2016 14:26:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>03/10/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>03/09/2016 12:00:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>03/10/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>03/10/2016 14:26:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>03/09/2016 11:57:34</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/23/2012 15:23:58</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 04:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 04:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>12/21/2017 14:55:03</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>12/21/2017 14:55:03</publishTime>
+    </File>
+    <File Include="Content/CoSwapApp.css">
+      <publishTime>01/03/2018 15:03:09</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>12/21/2017 14:54:51</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>12/21/2017 14:55:03</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>12/21/2017 14:55:03</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>12/21/2017 14:55:03</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>12/21/2017 14:55:03</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/21/2017 14:52:14</publishTime>
+    </File>
+    <File Include="Images/123.jpg">
+      <publishTime>12/28/2017 15:14:55</publishTime>
+    </File>
+    <File Include="Images/banner-1-1 %281%29.jpg">
+      <publishTime>12/28/2017 17:25:56</publishTime>
+    </File>
+    <File Include="Images/banner-1-1.jpg">
+      <publishTime>12/22/2017 15:13:30</publishTime>
+    </File>
+    <File Include="Images/banner-1-2.jpg">
+      <publishTime>12/22/2017 15:13:30</publishTime>
+    </File>
+    <File Include="Images/Banner-1.jpg">
+      <publishTime>12/25/2017 00:23:16</publishTime>
+    </File>
+    <File Include="Images/Banner-2.jpg">
+      <publishTime>12/24/2017 20:38:50</publishTime>
+    </File>
+    <File Include="Images/banner1.jpg">
+      <publishTime>12/24/2017 23:47:09</publishTime>
+    </File>
+    <File Include="Images/banner2.jpg">
+      <publishTime>12/24/2017 23:47:09</publishTime>
+    </File>
+    <File Include="Images/banner_coswap.jpg">
+      <publishTime>01/02/2018 19:34:57</publishTime>
+    </File>
+    <File Include="Images/banner_repo.jpg">
+      <publishTime>01/02/2018 19:34:57</publishTime>
+    </File>
+    <File Include="Images/bullet.png">
+      <publishTime>12/28/2017 14:22:49</publishTime>
+    </File>
+    <File Include="Images/call.jpg">
+      <publishTime>12/24/2017 22:46:57</publishTime>
+    </File>
+    <File Include="Images/call1.png">
+      <publishTime>12/28/2017 14:22:49</publishTime>
+    </File>
+    <File Include="Images/clementOoi.jpg">
+      <publishTime>01/04/2018 11:56:40</publishTime>
+    </File>
+    <File Include="Images/Co-Swap-image-01.jpg">
+      <publishTime>12/21/2017 22:16:20</publishTime>
+    </File>
+    <File Include="Images/default-person.jpg">
+      <publishTime>01/04/2018 13:37:22</publishTime>
+    </File>
+    <File Include="Images/drop-down-select.png">
+      <publishTime>12/28/2017 15:59:16</publishTime>
+    </File>
+    <File Include="Images/header-menu-new.jpg">
+      <publishTime>12/21/2017 15:08:48</publishTime>
+    </File>
+    <File Include="Images/header-menu-new1.jpg">
+      <publishTime>12/21/2017 18:53:00</publishTime>
+    </File>
+    <File Include="Images/imagenotavailable.png">
+      <publishTime>01/04/2018 12:35:41</publishTime>
+    </File>
+    <File Include="Images/line.jpg">
+      <publishTime>12/28/2017 15:08:34</publishTime>
+    </File>
+    <File Include="Images/loc.jpg">
+      <publishTime>12/24/2017 22:46:56</publishTime>
+    </File>
+    <File Include="Images/location.png">
+      <publishTime>12/28/2017 14:22:49</publishTime>
+    </File>
+    <File Include="Images/mail.png">
+      <publishTime>12/28/2017 14:22:49</publishTime>
+    </File>
+    <File Include="Images/msg.jpg">
+      <publishTime>12/24/2017 22:46:56</publishTime>
+    </File>
+    <File Include="Images/My %281%29.jpg">
+      <publishTime>12/28/2017 17:28:39</publishTime>
+    </File>
+    <File Include="Images/My2.jpg">
+      <publishTime>12/24/2017 00:21:50</publishTime>
+    </File>
+    <File Include="Images/plat.jpg">
+      <publishTime>12/23/2017 23:53:37</publishTime>
+    </File>
+    <File Include="Images/plat11.jpg">
+      <publishTime>01/02/2018 17:53:45</publishTime>
+    </File>
+    <File Include="Images/Trangle.JPG">
+      <publishTime>12/28/2017 00:37:51</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/21/2017 14:55:10</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.js">
+      <publishTime>12/21/2017 14:53:06</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.min.js">
+      <publishTime>12/21/2017 14:53:06</publishTime>
+    </File>
+    <File Include="scripts/bootstrap.js">
+      <publishTime>12/21/2017 14:55:03</publishTime>
+    </File>
+    <File Include="scripts/bootstrap.min.js">
+      <publishTime>12/21/2017 14:55:03</publishTime>
+    </File>
+    <File Include="scripts/jquery-1.10.2.js">
+      <publishTime>12/21/2017 14:55:06</publishTime>
+    </File>
+    <File Include="scripts/jquery-1.10.2.min.js">
+      <publishTime>12/21/2017 14:55:05</publishTime>
+    </File>
+    <File Include="scripts/jquery-1.10.2.min.map">
+      <publishTime>12/21/2017 14:55:05</publishTime>
+    </File>
+    <File Include="scripts/modernizr-2.6.2.js">
+      <publishTime>12/21/2017 14:55:10</publishTime>
+    </File>
+    <File Include="Views/Home/ColIntro.cshtml">
+      <publishTime>01/05/2018 19:16:49</publishTime>
+    </File>
+    <File Include="Views/Home/CollateralSwap.cshtml">
+      <publishTime>01/05/2018 19:13:18</publishTime>
+    </File>
+    <File Include="Views/Home/CollateralSwapPlatform.cshtml">
+      <publishTime>01/05/2018 19:13:21</publishTime>
+    </File>
+    <File Include="Views/Home/ContactUs.cshtml">
+      <publishTime>01/06/2018 11:46:45</publishTime>
+    </File>
+    <File Include="Views/Home/ContactUs_Old.cshtml">
+      <publishTime>01/04/2018 11:16:28</publishTime>
+    </File>
+    <File Include="Views/Home/Home.cshtml">
+      <publishTime>01/07/2018 14:49:08</publishTime>
+    </File>
+    <File Include="Views/Home/ManagementTeam.cshtml">
+      <publishTime>01/08/2018 22:29:36</publishTime>
+    </File>
+    <File Include="Views/Home/RepoIntro.cshtml">
+      <publishTime>01/05/2018 19:13:29</publishTime>
+    </File>
+    <File Include="Views/Home/Repurchase.cshtml">
+      <publishTime>01/05/2018 19:52:23</publishTime>
+    </File>
+    <File Include="Views/Home/RepurchasePlatform.cshtml">
+      <publishTime>01/05/2018 19:13:31</publishTime>
+    </File>
+    <File Include="Views/Shared/_Common.cshtml">
+      <publishTime>12/25/2017 12:59:05</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>12/25/2017 15:29:53</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>12/21/2017 14:52:15</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>12/21/2017 14:54:50</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/25/2017 15:38:11</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
