@@ -1,0 +1,266 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+<meta name="viewport" content="max-width=device-max-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link href="~/Content/CoSwapApp.css" rel="stylesheet" />
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/modernizr-2.6.2.js"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+    .footer {
+        left: 0;
+        bottom: 0;
+        max-width: 100%;
+        background-color: #464646;
+        color: white;
+    }
+
+    .mySlides {
+        display: none;
+    }
+
+    td.Hyper a:hover {
+        text-decoration: none;
+    }
+
+    .container {
+        max-width: 2000px;
+        padding: 0;
+    }
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        color: #696969;
+        height: 780px;
+        width: 100%;
+        max-width: 2000px;
+    }
+
+    .FooterLinks {
+        margin-left: 70px;
+    }
+
+</style>
+
+@*<div >
+    <img src="~/Images/header-menu-new1.jpg" style="width: 100%;height: 111px;" />
+    @*<div style="max-width: 100%; overflow: hidden;background-color: #FBFBFB">
+        <div style="max-width: 969px; float: left;">
+            <img src="~/Images/header-menu-new1.jpg" style="max-width:969px" />
+        </div>
+        <div style="float:right ">
+            <table style="margin-left:11px">
+                <tr>
+                    <td class="Hyper"><a href=""><h4 style="font-size: 16px; color: black; font-family: Arial, Helvetica, sans-serif;"><b style="font-size: 12px">Login</b></h4></a></td>
+                    <td>&nbsp;&nbsp;|&nbsp;&nbsp;</td>
+                    <td class="Hyper"><a href=""><h4 style="font-size: 16px; color: black; font-family: Arial, Helvetica, sans-serif;"><b style="font-size: 12px">SignUp</b></h4></a></td>
+                </tr>
+            </table>
+
+            <div style="margin-left:10px ">
+                <input id="add" type="text" data-role="none" placeholder="Search" style="max-width:155px; height: 10px; margin: 34px 11px 0px 0px;" />
+            </div>
+        </div>
+    </div>*@
+
+<div class="container-fluid">
+    <div class="row" style="background-color:#FBFBFB;margin-left:-15px;margin-right:0px">
+        <div class="col-md-8">
+            <img src="~/Images/header-menu-new1.jpg" width="100%" class="img-responsive" />
+        </div>
+        <div class="col-md-2" style="padding-left:13%;padding-top: 2%;">
+
+            <table class="table-responsive">
+                <tr class="spacer">
+                    <th><a target="_blank" href="https://ixdot.azurewebsites.net/dealer" style="text-decoration:none;color:black">Login</a></th>
+                    <th>&nbsp;&nbsp;|&nbsp;&nbsp;</th>
+                    <th id="google_translate_element"></th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+    <nav>
+        <ul id='menu'>
+            <li>
+                <a class='prett' href='/'>About Us <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /> </a>
+                <ul class='menus'>
+                    <li class='has-submenu'>
+                        <a class='home' href="@Url.Action("ManagementTeam","Home")" title='Management Team'>Management Team</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a class='prett' href="" title='Our Products'>Our Products <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a>
+                <ul class='menus'>
+                    <li class='has-submenu'>
+                        <a class='prett' href="@Url.Action("ColIntro","Home")" title='Collateral Swap'>Collateral Swap</a>
+                        <ul class='submenu'>
+                            <li><a href="@Url.Action("ColIntro","Home")" title="Introduction">Introduction</a></li>
+                            <li><a href="@Url.Action("CollateralSwap","Home")" title="Collateral Swap">Collateral Swap</a></li>
+                            <li><a href="@Url.Action("CollateralSwapPlatform","Home")" title="Collateral Swap Platform">Collateral Swap Platform</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a class='prett' href="@Url.Action("RepoIntro","Home")" title='Repurchase Agreement'>Repurchase Agreements</a>
+                        <ul class='submenu' style="width:auto">
+                            <li><a style="width: 325px;" href="@Url.Action("RepoIntro","Home")" title="Repurchase Agreements (REPO) & Liquidity Management">Repurchase Agreements & Liquidity Management</a></li>
+                            <li><a href="@Url.Action("Repurchase","Home")" title="Repurchase Agreements">Repurchase Agreements</a></li>
+                            <li><a href="@Url.Action("RepurchasePlatform","Home")" title="Repurchase Agreements Platform">Repurchase Agreements Platform</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a class='ContactUs' href="@Url.Action("ContactUs","Home")">Contact Us <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Our Partners <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>FAQs <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Blogs <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Suggested Links <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Testimonials <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Legal Documentation </a></li>
+
+        </ul>
+    </nav>
+
+
+
+
+<div class="container body-content">
+    
+</div>
+
+
+
+<div class="w3-content w3-section" style="width:100%">
+    <a href="@Url.Action("ColIntro","Home")"><img class="mySlides" src="~/Images/banner_coswap.jpg" style="width: 100%;"></a>
+    <a href="@Url.Action("RepoIntro","Home")"><img class="mySlides" src="~/Images/banner_repo.jpg" style="width: 100%;"></a>
+</div>
+
+
+<p style="background-color:#6dd1f0;max-width:148px;color:white;text-align:center;height:auto;padding:10px; margin-top: 14px;margin-left: -24px"><b>About us</b></p>
+
+<div style="margin: 2px 21px;">
+    <p style="font-family:calibri;text-align: justify; font-size:16px;">
+        The IXDOT platform is fully owned by IXDOT Pte. Ltd., a fintech start-up, incorporated in
+        Singapore. The promoters are banking and technology professionals, with experience in trading
+        platforms and application development for the financial services sector. The company plans to
+        provide platforms for not just liquidity, but also for regulatory capital adequacy management in
+        future.
+        &nbsp;&nbsp;
+        @*<div>
+            <b>© Copyrights @DateTime.Now.Year .All Rights Reserved.</b>
+        </div>*@
+    </p>
+</div>
+
+<div class="footer" style="padding-top:2%;padding-left:2%;padding-bottom:1px">
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left:0px; margin-right:0px">
+            <div class="col-md-2" style="width:160px;margin-left:-22px">
+                <ul class="list-unstyled">
+                    <li style="display:none"><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" />Coffee</li>
+                    <li><p style="margin-top:-17px;margin-left:-3px;font-size:13px">Quick Navigation</p></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px;"><a href="@Url.Action("Home","Home")" style="color:white">About Us</a></span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">Our Partners</span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px"><a href="@Url.Action("ColIntro","Home")" style="color:white">Our Products</a></span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">FAQs</span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px "><a href="@Url.Action("ContactUs","Home")" style="color:white">ContactUs</a></span></li>
+                </ul>
+            </div>
+            <div class="col-md-2" style="margin-left:-7px;margin-top:11px;">
+                <ul class="list-unstyled">
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">Blogs</span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">Suggested Links</span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">Testimonials</span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">Legal Documentation</span></li>
+                </ul>
+            </div>
+            <div class="col-md-1"></div>
+
+            <div class="col-md-3" style="margin-left:-7px">
+
+                <ul class="list-unstyled">
+                    <li><p style="margin-top:-17px;font-size:13px">Contact Info</p></li>
+                    <li>
+                        <img src="~/Images/location.png" /><span style="margin-left:3%;font-size:12px">1, Coleman Street, #10-06,</span>
+                    </li>
+                    <li>
+                        <img src="~/Images/Screenshot (19).png" /><span style="margin-left:3%;font-size:12px">The Adelphi,</span>
+                    </li>
+                    <li>
+                        <img src="~/Images/Screenshot (19).png" /><span style="margin-left:3%;font-size:12px">Singapore 179803</span>
+                    </li>
+                    <li style="padding-top:3px"></li>
+                    <li><img src="~/Images/call1.png" /><span style="margin-left:2%;font-size:12px"> +65 6589-8186</span></li>
+                    <li style="padding-top:3px"></li>
+                    <li>
+                        <img src="~/Images/mail.png" /><span style="margin-left:2%;font-size:12px">
+                            yvonne.chow@ixdotco.com<br />
+                            <img src="~/Images/Screenshot (19).png" style="width:24px" /><span style="margin-left:3%;font-size:12px">www.ixdotco.com</span>
+                        </span>
+                    </li>
+                    @*<li>
+                            <img src="~/Images/Screenshot (19).png" /><span style="margin-left:3%;font-size:12px">www.ixdotco.com</span>
+                        </li>*@
+
+                </ul>
+            </div>
+            <div class="col-md-4 container-fluid" style="padding-right:0px">
+                <p style="float:right;margin-top:129px;font-size:12px;color:#46bddf">© Copyrights @DateTime.Now.Year .All Rights Reserved.</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) { myIndex = 1 }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 10 seconds
+    }
+</script>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

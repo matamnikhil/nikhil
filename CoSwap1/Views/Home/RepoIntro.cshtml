@@ -1,0 +1,372 @@
+﻿
+@{
+    ViewBag.Title = "RepoIntro";
+}
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link href="~/Content/CoSwapApp.css" rel="stylesheet" />
+<script src="~/scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/bootstrap.min.js"></script>
+<script src="~/scripts/modernizr-2.6.2.js"></script>
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<style>
+    .footer {
+        left: 0;
+        bottom: 0;
+        max-width: 100%;
+        background-color: #464646;
+        color: white;
+    }
+
+    ul.FooterList {
+        /*margin: 0.75em 0;*/
+        padding: 0 1em;
+        list-style: none;
+        padding-left: 27px;
+    }
+
+        ul.FooterList li:before {
+            content: "";
+            border-color: transparent black;
+            border-style: solid;
+            border-width: 0.35em 0 0.35em 0.45em;
+            display: block;
+            height: 0;
+            width: 0;
+            left: -1em;
+            top: 1em;
+            position: relative;
+        }
+
+    .mySlides {
+        display: none;
+    }
+
+    td.Hyper a:hover {
+        text-decoration: none;
+    }
+
+    .container {
+        max-width: 2000px;
+        padding: 0;
+    }
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        color: #696969;
+        height: 780px;
+        width: 100%;
+        max-width: 2000px;
+    }
+
+    .FooterLinks {
+        margin-left: 70px;
+    }
+
+    .vcenter {
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
+    }
+
+    .borderless td, .borderless th {
+        border: none;
+    }
+
+    /*@@media (min-width: 992px) {
+             .col-md-8 {
+                 width: 67.666667%;
+                 padding-left: 64px;
+             }
+
+         }
+         @@media (min-width: 768px) {
+             .col-sm-8 {
+                 width: 68.666667%;
+                 padding-left: 54px;
+             }
+
+         }
+         @@media (min-width: 1020px) {
+             .col-md-8 {
+                 width: 30.666667%;
+                 padding-left: 3%;
+             }
+         }
+         @@media (min-width: 1500px) {
+             .col-lg-8 {
+                 width: 41.666667%;
+                 padding-left: 0px;
+                 margin-left:-7px;
+             }
+         }
+         @@media (min-width: 1700px) {
+             .col-lg-8 {
+                 width: 41.666667%;
+                 padding-left: 0%;
+                 margin-left:-7%;
+             }
+         }
+        @@media (min-width: 992px) {
+             .col-md-2 {
+                 width: 22.666667%;
+
+             }
+         }
+         @@media  {
+             .col-sm-12 {
+                 margin-left: -20px;
+
+             }
+         }*/
+    @@media (max-width: 1018) {
+        .main {
+            left: 28px !important;
+        }
+
+        .bain {
+            margin-left: 150px !important;
+        }
+
+        .list-unstyled {
+            margin: 15px !important;
+        }
+    }
+</style>
+<div class="container-fluid">
+    <div class="row" style="background-color:#FBFBFB;margin-left:-15px;margin-right:0px">
+        <div class="col-md-8">
+            <img src="~/Images/header-menu-new1.jpg" width="100%" class="img-responsive" />
+        </div>
+        <div class="col-md-2" style="padding-left:13%;padding-top: 2%;">
+
+            <table class="table-responsive">
+                <tr class="spacer">
+                    <th><a target="_blank" href="https://ixdot.azurewebsites.net/dealer" style="text-decoration:none;color:black">Login</a></th>
+                    <th>&nbsp;&nbsp;|&nbsp;&nbsp;</th>
+                    <th id="google_translate_element"></th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+    <nav>
+        <ul id='menu'>
+            <li>
+                <a class='prett' href='/'>About Us <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /> </a>
+                <ul class='menus'>
+                    <li class='has-submenu'>
+                        <a class='home' href="@Url.Action("ManagementTeam","Home")" title='Management Team'>Management Team</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a class='prett' href="" title='Our Products'>Our Products <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a>
+                <ul class='menus'>
+                    <li class='has-submenu'>
+                        <a class='prett' href="@Url.Action("ColIntro","Home")" title='Collateral Swap'>Collateral Swap</a>
+                        <ul class='submenu'>
+                            <li><a href="@Url.Action("ColIntro","Home")" title="Introduction">Introduction</a></li>
+                            <li><a href="@Url.Action("CollateralSwap","Home")" title="Collateral Swap">Collateral Swap</a></li>
+                            <li><a href="@Url.Action("CollateralSwapPlatform","Home")" title="Collateral Swap Platform">Collateral Swap Platform</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a class='prett' href="@Url.Action("RepoIntro","Home")" title='Repurchase Agreement'>Repurchase Agreements</a>
+                        <ul class='submenu' style="width:auto">
+                            <li><a style="width: 325px;" href="@Url.Action("RepoIntro","Home")" title="Repurchase Agreements (REPO) & Liquidity Management">Repurchase Agreements & Liquidity Management</a></li>
+                            <li><a href="@Url.Action("Repurchase","Home")" title="Repurchase Agreements">Repurchase Agreements</a></li>
+                            <li><a href="@Url.Action("RepurchasePlatform","Home")" title="Repurchase Agreements Platform">Repurchase Agreements Platform</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a class='ContactUs' href="@Url.Action("ContactUs","Home")">Contact Us <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Our Partners <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>FAQs <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Blogs <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Suggested Links <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Testimonials <img src="~/Images/drop-down-select.png" style="height: 16px; width: 1px; margin: 0px 0px 0px 9px;" /></a></li>
+
+            <li style="opacity:0.2"><a class='ContactUs'>Legal Documentation </a></li>
+
+        </ul>
+    </nav>
+
+
+    <div class="w3-content w3-section" style="width:100%">
+        <div class="item active">
+            <img src="~/Images/banner_repo.jpg" style="width: 100%;">
+        </div>
+    </div>
+
+
+    @*<div data-role="main" class="ui-content embed-responsive embed-responsive-16by9">
+        <p style="background-color:#FCB414;width:446px;color:white;text-align:center;height:40px;padding:10px">
+            Repurchase Agreements (REPO) &
+            Liquidity Management
+        </p>
+    </div>*@
+
+<div style="height:40px;padding-top: 9px;margin-left: 14px;">
+    <span style="color:#68B3EB;font-family:Calibri">Our Products</span>&nbsp;<b>></b>&nbsp;<a href="@Url.Action("RepoIntro","Home")" style="color:#68B3EB;font-family:Calibri">Repurchase Agreement</a>&nbsp;<b>></b>&nbsp;<span style="font-family:Calibri">Repurchase Agreements & Liquidity Management</span>
+</div>
+
+<table>
+    <tr>
+        <td class="col-md-3" style="background-color:#EDEDED;vertical-align:top;padding-top:35px">
+            <ul style="font-family:Calibri">
+                <li style="margin-left:-35px;list-style-type:none">
+                    <b style="color:black">Collateral Swap</b>
+                    <ul class="FooterList">
+                        <li style="height: auto;"><a href="@Url.Action("ColIntro","Home")" title="Collateral Swap">An Appreciation of Collateral Swap</a></li>
+                        <li style="height: auto;"><a href="@Url.Action("CollateralSwap","Home")" title="Collateral Swap">Collateral Swap</a></li>
+                        <li style="height: auto;"><a href="@Url.Action("CollateralSwapPlatform","Home")" title="Collateral Swap Platform">Collateral Swap Platform</a></li>
+                    </ul>
+                </li>
+
+                <li style="margin-top: 14px;list-style-type:none">
+                    <b style="color:black;margin-left:-36px">Repurchase Agreement</b>
+                    <ul class="FooterList" style="margin-left:-37px">
+                        <li style="height: auto;"><u>Repurchase Agreements & Liquidity Management</u></li>
+                        <li style="height: auto;"><a href="@Url.Action("Repurchase","Home")" title="Repurchase Agreements">Repurchase Agreements</a></li>
+                        <li style="height: auto;"><a href="@Url.Action("RepurchasePlatform","Home")" title="Repurchase Agreements Platform">Repurchase Agreements Platform</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </td>
+
+        <td class="col-md-9">
+            <p class="well" style="background-color:#FCB414;width:362px;margin-bottom:8px;color:white;text-align:center;height:auto;padding:10px;margin-top: -2px;margin-left: -15px; ">
+                
+                <b style="font-size:12px">
+                    Repurchase Agreements (REPO) &
+                    Liquidity Management
+                </b>
+               
+            </p>
+
+            <div style="font-family:calibri;text-align: justify; font-size:16px; margin: 2px 21px;margin-left: 0px;">
+                A repurchase, or repo, agreement (short for sale and repurchase) involves an institution with a
+                liquidity need selling a perceived liquid security for cash for a price x and agreeing to buy it back at a
+                later date for a price greater than x. The difference between the two prices represents the interest
+                payment relating to period for which the underlying security was ‘sold’ for cash. In other words, this
+                is nothing but borrowing short term funds pledging a specified liquid asset as collateral. The market
+                is burgeoning: it is estimated that the overall size in repo agreements would exceed USD 15 trillion
+                by 2020.<br /><br />
+                To borrow in the repo market, banks must have underlying, liquid, assets, to pledge against the
+                borrowing —collateral, in other words. It is the supply of, and demand for, collateral that determines
+                liquidity in the financial markets. However, not all collateral can be treated equally. Counterparties
+                taking possession of the underlying collateral assume credit risk, i.e., the possibility that the
+                borrower fails to repay, and the securities they are left holding may not sell for their face value.<br /><br />
+                Therefore, they apply a discount, or “haircut”, to the collateral, depending on its perceived riskiness.
+                At times of stress, lenders get more nervous and factor in bigger discounts than during times of
+                normalcy, and this, in a nutshell, is what happened during the financial crisis. Bigger haircuts mean
+                that borrowers need more collateral than before in order to fund themselves. When market
+                volatility spikes, funding capacity drops in tandem and often exponentially. The result, a liquidity
+                squeeze at the worst possible moment, is a template of how the next crisis may occur, although
+                regulators are trying to reduce institutions’ reliance on short-term funding. This though, is easier
+                said than done, since the Central Banks do not have access to the members’ daily position profiles.
+                Just as there are participants in the market in need of liquidity, there will be players who have
+                surplus liquidity in need of yield enhancement, and they seek avenues to lend, and they may buy an
+                identified liquid security for cash, and then sell it back at a later date. These are called a ‘reverse’
+                repos and these transactions take the facet of ‘buy and sell back’. A repo for one counterparty is
+                simply a reverse repo for the other.
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+
+ <div class="footer" style="padding-top:2%;padding-left:2%;padding-bottom:1px">
+
+    <div class="container-fluid">
+        <div class="row" style="margin-left:0px; margin-right:0px">
+            <div class="col-md-2" style="width:160px;margin-left:-22px">
+                <ul class="list-unstyled">
+                    <li style="display:none"><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" />Coffee</li>
+                    <li><p style="margin-top:-17px;margin-left:-3px;font-size:13px">Quick Navigation</p></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px;"><a href="@Url.Action("Home","Home")" style="color:white">About Us</a></span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">Our Partners</span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px"><a href="@Url.Action("ColIntro","Home")" style="color:white">Our Products</a></span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">FAQs</span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px "><a href="@Url.Action("ContactUs","Home")" style="color:white">ContactUs</a></span></li>
+                </ul>
+            </div>
+            <div class="col-md-2" style="margin-left:-7px;margin-top:11px;">
+                <ul class="list-unstyled">
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">Blogs</span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">Suggested Links</span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">Testimonials</span></li>
+                    <li style="padding-top: 8px;"></li>
+                    <li><img src="~/Images/bullet.png" style="width: 7px; padding-bottom:3px;" /><span style="margin-left:12px;margin-bottom:10%;font-size: 13px">Legal Documentation</span></li>
+                </ul>
+            </div>
+            <div class="col-md-1"></div>
+
+            <div class="col-md-3" style="margin-left:-7px">
+
+                <ul class="list-unstyled">
+                    <li><p style="margin-top:-17px;font-size:13px">Contact Info</p></li>
+                    <li>
+                        <img src="~/Images/location.png" /><span style="margin-left:3%;font-size:12px">1, Coleman Street, #10-06,</span>
+                    </li>
+                    <li>
+                        <img src="~/Images/Screenshot (19).png" /><span style="margin-left:3%;font-size:12px">The Adelphi,</span>
+                    </li>
+                    <li>
+                        <img src="~/Images/Screenshot (19).png" /><span style="margin-left:3%;font-size:12px">Singapore 179803</span>
+                    </li>
+                    <li style="padding-top:3px"></li>
+                    <li><img src="~/Images/call1.png" /><span style="margin-left:2%;font-size:12px"> +65 6589-8186</span></li>
+                    <li style="padding-top:3px"></li>
+                    <li>
+                        <img src="~/Images/mail.png" /><span style="margin-left:2%;font-size:12px">
+                            yvonne.chow@ixdotco.com<br />
+                            <img src="~/Images/Screenshot (19).png" style="width:24px" /><span style="margin-left:3%;font-size:12px">www.ixdotco.com</span>
+                        </span>
+                    </li>
+                    @*<li>
+                            <img src="~/Images/Screenshot (19).png" /><span style="margin-left:3%;font-size:12px">www.ixdotco.com</span>
+                        </li>*@
+
+                </ul>
+            </div>
+            <div class="col-md-4 container-fluid" style="padding-right:0px">
+                <p style="float:right;margin-top:129px;font-size:12px;color:#46bddf">© Copyrights @DateTime.Now.Year .All Rights Reserved.</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
